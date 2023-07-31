@@ -38,11 +38,11 @@
     }
 
     .container .email-icon {
-      background-image: url("sobre.png");
+      background-image: url("img/sobre.png");
     }
 
     .container .password-icon {
-      background-image: url("clave.png");
+      background-image: url("img/clave.png");
     }
 
     .container input[type="submit"] {
@@ -61,49 +61,6 @@
   </style>
 </head>
 <body>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyAhR8GUf2R1Y59wyc6h8ClYTTMULqNUBqw",
-          authDomain: "appweb1-63b7b.firebaseapp.com",
-          projectId: "appweb1-63b7b",
-          storageBucket: "appweb1-63b7b.appspot.com",
-          messagingSenderId: "234372460642",
-          appId: "1:234372460642:web:ec60b9b6e34f6e1ab9a13b"
-        };
-
-        const email = "anagabriela.manobanda@epn.edu.ec";
-        const password = "ana20130209";
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-
-        // Initialize Firebase Authentication and get a reference to the service
-        //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
-            // ...
-        })
-
-        .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
-        });
-
-      </script>
   <div class="container">
     <h1>Registrarse</h1>
     <form action="process_signup.php" method="POST">
